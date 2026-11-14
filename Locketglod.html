@@ -1,0 +1,10 @@
+let body = $response.body;
+let obj = JSON.parse(body);
+
+obj.is_premium = true;
+obj.is_gold = true;
+obj.ai_filter_unlocked = true;
+obj.photobooth_unlocked = true;
+obj.max_video_duration = 15;
+
+$done({body: JSON.stringify(obj)});
